@@ -13,6 +13,7 @@ using System.Web.Http;
 
 namespace API.Controllers
 {
+    [Authorize]
     public class ComunidadController : ApiController
     {
         CatalogoRespuestasHTTP _objCatalogoRespuestasHTTP = new CatalogoRespuestasHTTP();

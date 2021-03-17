@@ -10,6 +10,7 @@ using System.Web.Http;
 
 namespace API.Controllers
 {
+    [Authorize]
     public class CantonController : ApiController
     {
         CatalogoRespuestasHTTP _objCatalogoRespuestasHTTP = new CatalogoRespuestasHTTP();

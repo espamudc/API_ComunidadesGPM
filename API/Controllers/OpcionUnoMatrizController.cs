@@ -10,6 +10,7 @@ using API.Models.Entidades;
 
 namespace API.Controllers
 {
+    [Authorize]
     public class OpcionUnoMatrizController : ApiController
     {
         CatalogoRespuestasHTTP _objCatalogoRespuestasHTTP = new CatalogoRespuestasHTTP();
@@ -43,7 +44,7 @@ namespace API.Controllers
                 else
                 {
                     int _idPregunta = Convert.ToInt32(_seguridad.DesEncriptar(_objOpcionUnoMatriz.Pregunta.IdPreguntaEncriptado));
-                    var _objPregunta = _objCatalogoPregunta.ConsultarPreguntaPorId(_idPregunta).Where(c=>c.Estado==true).FirstOrDefault();
+                    var _objPregunta = _objCatalogoPregunta.ConsultarPreguntaPorId(_idPregunta).Where(c => c.Estado == true).FirstOrDefault();
                     if (_objPregunta == null)
                     {
                         _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "404").FirstOrDefault();
@@ -148,12 +149,12 @@ namespace API.Controllers
                         _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "404").FirstOrDefault();
                         _http.mensaje = "No se encontró la opción uno matriz en el sistema";
                     }
-                    else if(_objOpcionUnoMatriz.Utilizado=="1" || _objOpcionUnoMatriz.Encajonamiento=="1")
+                    else if (_objOpcionUnoMatriz.Utilizado == "1" || _objOpcionUnoMatriz.Encajonamiento == "1")
                     {
                         _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "404").FirstOrDefault();
                         _http.mensaje = "No es posible eliminar la opción uno matriz porque está siendo utilizada";
                     }
-                    else if(_objOpcionUnoMatriz.Utilizado == "0" || _objOpcionUnoMatriz.Encajonamiento == "0")
+                    else if (_objOpcionUnoMatriz.Utilizado == "0" || _objOpcionUnoMatriz.Encajonamiento == "0")
                     {
                         _objCatalogoOpcionUnoMatriz.EliminarOpcionUnoMatriz(_idOpcionUnoMatriz);
                         _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "200").FirstOrDefault();

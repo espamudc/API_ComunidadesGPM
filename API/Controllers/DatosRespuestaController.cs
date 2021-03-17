@@ -10,9 +10,9 @@ using System.Web.Http;
 
 namespace API.Controllers
 {
+    [Authorize]
     public class DatosRespuestaController : ApiController
     {
-
         CatalogoDatosRespuesta objCatalogoDatosRespuesta = new CatalogoDatosRespuesta();
         Seguridad _seguridad = new Seguridad();
         CatalogoRespuestasHTTP _objCatalogoRespuestasHTTP = new CatalogoRespuestasHTTP();

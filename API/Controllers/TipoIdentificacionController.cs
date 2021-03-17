@@ -11,6 +11,7 @@ using API.Models.Metodos;
 
 namespace API.Controllers
 {
+    [Authorize]
     public class TipoIdentificacionController : ApiController
     {
 

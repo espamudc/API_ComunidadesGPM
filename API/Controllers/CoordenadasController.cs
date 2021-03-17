@@ -1,5 +1,4 @@
 ﻿using API.Models.Catalogos;
-using API.Models.Entidades;
 using API.Models.Metodos;
 using System;
 using System.Collections.Generic;
@@ -10,6 +9,7 @@ using System.Web.Mvc;
 
 namespace API.Controllers
 {
+    [System.Web.Http.Authorize]
     public class CoordenadasController : ApiController
     {
         // GET: Coordenadas

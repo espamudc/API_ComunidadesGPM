@@ -23,30 +23,31 @@ namespace API.Controllers
         CatalogoTokens catTokens = new CatalogoTokens();
         Seguridad _seguridad = new Seguridad();
 
+        [Authorize]
         [HttpPost]
         [Route("api/usuario_insertar")]
         public object usuario_insertar(Usuario _objUsuario)
-        {           
+        {
             object _respuesta = new object();
             RespuestaHTTP _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "500").FirstOrDefault();
             try
             {
-                if (_objUsuario == null || _objUsuario.Persona==null)
+                if (_objUsuario == null || _objUsuario.Persona == null)
                 {
                     _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "400").FirstOrDefault();
                     _http.mensaje = "No se encontró la persona o usuario para insertar";
                 }
-                else if (_objUsuario.Persona.IdPersonaEncriptado==null || string.IsNullOrEmpty(_objUsuario.Persona.IdPersonaEncriptado.Trim()))
+                else if (_objUsuario.Persona.IdPersonaEncriptado == null || string.IsNullOrEmpty(_objUsuario.Persona.IdPersonaEncriptado.Trim()))
                 {
                     _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "400").FirstOrDefault();
                     _http.mensaje = "Ingrese el identificador";
                 }
-                else if(_objUsuario.Correo==null || string.IsNullOrEmpty(_objUsuario.Correo.Trim())) 
+                else if (_objUsuario.Correo == null || string.IsNullOrEmpty(_objUsuario.Correo.Trim()))
                 {
                     _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "400").FirstOrDefault();
                     _http.mensaje = "Ingrese un usuario";
                 }
-                else if(_objCatalogoUsuarios.ValidarCorreo(_objUsuario).Count > 0)
+                else if (_objCatalogoUsuarios.ValidarCorreo(_objUsuario).Count > 0)
                 {
                     _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "406").FirstOrDefault();
                     _http.mensaje = "El usuario existente";
@@ -60,7 +61,7 @@ namespace API.Controllers
                 {
                     int _idPersona = Convert.ToInt32(_seguridad.DesEncriptar(_objUsuario.Persona.IdPersonaEncriptado));
                     var _objPersona = _objCatalogoPersona.ConsultarPersona().Where(c => c.IdPersona == _idPersona && c.Estado == true).FirstOrDefault();
-                    if(_objPersona == null)
+                    if (_objPersona == null)
                     {
                         _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "404").FirstOrDefault();
                         _http.mensaje = "No se encontró la persona a la que intenta asignarle un usuario.";
@@ -71,14 +72,14 @@ namespace API.Controllers
                         _objUsuario.Persona = _objPersona;
                         _objUsuario.Clave = _seguridad.Encriptar(_objUsuario.Clave);
                         int _idUsuarioIngresado = _objCatalogoUsuarios.InsertarUsuario(_objUsuario);
-                        if(_idUsuarioIngresado == 0)
+                        if (_idUsuarioIngresado == 0)
                         {
                             _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "400").FirstOrDefault();
                             _http.mensaje = "Ocurrió un error al intentar ingresar al usuario, intente nuevamente.";
                         }
                         else
                         {
-                            var _objUsuarioIngresado = _objCatalogoUsuarios.ConsultarUsuarioPorId(_idUsuarioIngresado).Where(c=>c.Estado==true).FirstOrDefault();
+                            var _objUsuarioIngresado = _objCatalogoUsuarios.ConsultarUsuarioPorId(_idUsuarioIngresado).Where(c => c.Estado == true).FirstOrDefault();
                             _objUsuarioIngresado.IdUsuario = 0;
                             _objUsuarioIngresado.Persona.IdPersona = 0;
                             _objUsuarioIngresado.Persona.Sexo.IdSexo = 0;
@@ -87,7 +88,7 @@ namespace API.Controllers
                             _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "200").FirstOrDefault();
                         }
                     }
-                   
+
                 }
             }
             catch (Exception ex)
@@ -96,13 +97,17 @@ namespace API.Controllers
             }
             return new
             {
-                respuesta = _respuesta, http = _http
+                respuesta = _respuesta,
+                http = _http
             };
         }
 
+
+        [Authorize]
         [HttpPost]
         [Route("api/usuario_modificar")]
-        public object usuario_modificar(Usuario _objUsuario) {
+        public object usuario_modificar(Usuario _objUsuario)
+        {
 
             object _respuesta = new object();
             RespuestaHTTP _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "500").FirstOrDefault();
@@ -149,7 +154,7 @@ namespace API.Controllers
                             _http.mensaje = "No se encontró a la persona en el sistema";
                         }
                         else
-                        {                           
+                        {
                             _objUsuario.Estado = true;
 
                             _objUsuario.Persona = _objPersona;
@@ -189,6 +194,11 @@ namespace API.Controllers
 
 
         }
+<<<<<<< HEAD
+=======
+
+        [Authorize]
+>>>>>>> 38defc51b45a0b8504590836b9f49951a053e090
         [HttpPost]
         [Route("api/usuario_eliminar")]
         public object usuario_eliminar(string _idUsuarioEncriptado)
@@ -245,6 +255,11 @@ namespace API.Controllers
             };
 
         }
+<<<<<<< HEAD
+=======
+
+        [Authorize]
+>>>>>>> 38defc51b45a0b8504590836b9f49951a053e090
         [HttpPost]
         [Route("api/usuario_consultar")]
         public object usuario_consultar()
@@ -254,15 +269,15 @@ namespace API.Controllers
             RespuestaHTTP _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "500").FirstOrDefault();
 
             try
-            {                        
-                var listaUsuarios  = _objCatalogoUsuarios.ConsultarUsuario();
+            {
+                var listaUsuarios = _objCatalogoUsuarios.ConsultarUsuario();
 
                 foreach (var item in listaUsuarios)
                 {
-                    item.IdUsuario                                          = 0;
-                    item.Persona.IdPersona                                  = 0;
-                    item.Persona.Sexo.IdSexo                                = 0;
-                    item.Persona.TipoIdentificacion.IdTipoIdentificacion    = 0;
+                    item.IdUsuario = 0;
+                    item.Persona.IdPersona = 0;
+                    item.Persona.Sexo.IdSexo = 0;
+                    item.Persona.TipoIdentificacion.IdTipoIdentificacion = 0;
                 }
                 _respuesta = listaUsuarios;
                 _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "200").FirstOrDefault();
@@ -284,6 +299,11 @@ namespace API.Controllers
 
 
         }
+<<<<<<< HEAD
+=======
+
+        [Authorize]
+>>>>>>> 38defc51b45a0b8504590836b9f49951a053e090
         [HttpPost]
         [Route("api/usuario_consultar")]
         public object usuario_consultar(string _idUsuarioEncriptado)
@@ -326,6 +346,11 @@ namespace API.Controllers
 
 
         }
+<<<<<<< HEAD
+=======
+
+        [AllowAnonymous]
+>>>>>>> 38defc51b45a0b8504590836b9f49951a053e090
         [HttpPost]
         [Route("api/ValidarCorreo")]
         public object ValidarCorreo(Usuario _objUsuario)
@@ -357,13 +382,14 @@ namespace API.Controllers
             return new { respuesta = _respuesta, http = _http };
         }
 
+        [AllowAnonymous]
         [HttpPost]
         [Route("api/Login")]
         public object Login(Usuario _objUsuario)
-        {           
+        {
             object _respuesta = new object();
             RespuestaHTTP _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "500").FirstOrDefault();
-
+            string _token = "";
             try
             {
                 // calida el token de la peticion, este es una ruta para consultar asi que el identificador del token debe ser 4
@@ -391,7 +417,7 @@ namespace API.Controllers
                         _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "400").FirstOrDefault();
                         _http.mensaje = "Este usuario ha sido deshabilitado. Comuníquese con el administrador del sistema.";
                     }
-                    else if (_objUsuarioBuscado.Clave != _objUsuario.Clave)
+                    else if (_seguridad.DesEncriptar(_objUsuarioBuscado.Clave) != _objUsuario.Clave)
                     {
                         _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "400").FirstOrDefault();
                         _http.mensaje = "La contraseña es incorrecta";
@@ -399,7 +425,7 @@ namespace API.Controllers
                     else
                     {
                         var _listaAsignarUsuarioTipoUsuario = _objCatalogoAsignarUsuarioTipoUsuario.ConsultarAsignarUsuarioTipoUsuario().Where(c => c.Usuario.IdUsuario == _objUsuarioBuscado.IdUsuario && c.Estado == true && c.TipoUsuario.Estado == true).ToList();
-                        if(_listaAsignarUsuarioTipoUsuario.Count==0)
+                        if (_listaAsignarUsuarioTipoUsuario.Count == 0)
                         {
                             _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "204").FirstOrDefault();
                             _http.mensaje = "No se encontraron roles asignados a este usuario";
@@ -417,7 +443,7 @@ namespace API.Controllers
                             }
                             _respuesta = _listaAsignarUsuarioTipoUsuario;
                             _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "200").FirstOrDefault();
-
+                            _token = TokenGenerator.GenerateTokenJwt(_objUsuario.Correo);
                         }
                     }
                 }
@@ -431,15 +457,73 @@ namespace API.Controllers
                     http = _http
                 };
             }
-            return new
+            if (_token != "")
             {
-                respuesta = _respuesta,
-                http = _http
-            };
+                return new
+                {
+                    respuesta = _respuesta,
+                    http = _http,
+                    token = _token
+                };
+            }
+            else
+            {
+                return new
+                {
+                    respuesta = _respuesta,
+                    http = _http,
+                };
+            }
 
         }
+    
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("api/token/update")]
+        public object updateToken(Usuario _objUsuario)
+        {
+            object _respuesta = new object();
+            RespuestaHTTP _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "500").FirstOrDefault();
+            string _token = "";
+            try
+            {
+                if (string.IsNullOrEmpty(_objUsuario.Correo.Trim()))
+                {
+                    _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "406").FirstOrDefault();
+                    _http.mensaje = "Revise su conexión a internet";
+                }
+                else {
+                    _token = TokenGenerator.GenerateTokenJwt(_objUsuario.Correo);
+                }
 
+                if (_token != "")
+                {
+                    return new
+                    {
+                        token = _token
+                    };
+                }
+                else {
+                    return new
+                    {
+                        respuesta = _http.mensaje,
+                        http = _http
+                    };
+                }
 
+            }
+            catch (Exception ex)
+            {
+                _http.mensaje = _http.mensaje + " " + ex.Message.ToString();
+                return new
+                {
+                    respuesta = _http.mensaje,
+                    http = _http
+                };
+            }
 
-    }
+            //return "fff";
+        }
+
+        }
 }

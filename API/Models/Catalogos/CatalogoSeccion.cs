@@ -233,6 +233,33 @@ namespace API.Models.Catalogos
             }
             return _lista;
         }
+        public List<Seccion> ConsultarSeccionPorIdComponenteConPreguntaRandom(int _idComponente, ref List<int> numerosRandom)
+        {
+
+            List<Seccion> _lista = new List<Seccion>();
+            Random _r = new Random();
+            int _x = 0;
+            foreach (var item in db.Sp_SeccionConsultar().Where(c => c.IdComponente == _idComponente).ToList())
+            {
+                _x = _r.Next(10000, 99999);
+                while (numerosRandom.Contains(_x))
+                {
+                    _x = _r.Next(10000, 99999);
+                }
+                numerosRandom.Add(_x);
+                _lista.Add(new Seccion()
+                {
+                    IdSeccion = item.IdSeccion,
+                    IdSeccionEncriptado = _seguridad.Encriptar(item.IdSeccion.ToString()),
+                    Descripcion = _x + ". " + item.DescripcionSeccion,
+                    Estado = item.EstadoSeccion,
+                    Orden = item.OrdenSeccion,
+                    Utilizado = item.UtilizadoSeccion,
+                    listaPregunta = new CatalogoPregunta().ConsultarPreguntaPorIdSeccionConTipoPregunta(item.IdSeccion)
+                });
+            }
+            return _lista;
+        }
 
     }
 }

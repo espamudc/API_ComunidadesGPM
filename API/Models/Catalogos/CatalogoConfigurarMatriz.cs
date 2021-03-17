@@ -16,7 +16,7 @@ namespace API.Models.Catalogos
         {
             try
             {
-                return int.Parse(db.Sp_ConfigurarMatrizInsertar(_objConfigurarMatriz.OpcionUnoMatriz.IdOpcionUnoMatriz,_objConfigurarMatriz.OpcionDosMatriz.IdOpcionDosMatriz,_objConfigurarMatriz.Estado).Select(x=>x.Value.ToString()).FirstOrDefault());
+                return int.Parse(db.Sp_ConfigurarMatrizInsertar(_objConfigurarMatriz.OpcionUnoMatriz.IdOpcionUnoMatriz, _objConfigurarMatriz.OpcionDosMatriz.IdOpcionDosMatriz, _objConfigurarMatriz.Estado).Select(x => x.Value.ToString()).FirstOrDefault());
             }
             catch (Exception)
             {
@@ -31,7 +31,7 @@ namespace API.Models.Catalogos
         public List<ConfigurarMatriz> ConsultarConfigurarMatrizPorIdOpcionDosMatriz(int _idOpcionDosMatriz)
         {
             List<ConfigurarMatriz> _lista = new List<ConfigurarMatriz>();
-            foreach (var item in db.Sp_ConfigurarMatrizConsultar().Where(c=>c.IdOpcionDosMatriz==_idOpcionDosMatriz).ToList())
+            foreach (var item in db.Sp_ConfigurarMatrizConsultar().Where(c => c.IdOpcionDosMatriz == _idOpcionDosMatriz).ToList())
             {
                 _lista.Add(new ConfigurarMatriz()
                 {
@@ -52,8 +52,8 @@ namespace API.Models.Catalogos
                         IdOpcionUnoMatrizEncriptado = _seguridad.Encriptar(item.IdOpcionUnoMatriz.ToString()),
                         Descripcion = item.DescripcionOpcionUnoMatriz,
                         Estado = item.EstadoOpcionOpcionUnoMatriz,
-                        Utilizado=item.UtilizadoOpcionUnoMatriz,
-                        Encajonamiento=item.EncajonamientoOpcionUnoMatriz,
+                        Utilizado = item.UtilizadoOpcionUnoMatriz,
+                        Encajonamiento = item.EncajonamientoOpcionUnoMatriz,
                         Pregunta = new Pregunta()
                         {
                             IdPregunta = item.IdPregunta,
@@ -106,17 +106,17 @@ namespace API.Models.Catalogos
             List<ConfigurarMatriz> _lista = new List<ConfigurarMatriz>();
             foreach (var item in db.Sp_ConfigurarMatrizConsultar2(_idPregunta, 0).ToList())
             {
-                _lista.Add( new ConfigurarMatriz()
+                _lista.Add(new ConfigurarMatriz()
                 {
-                    IdConfigurarMatriz=item.IdConfigurarMatriz,
+                    IdConfigurarMatriz = item.IdConfigurarMatriz,
                     IdConfigurarMatrizEncriptado = _seguridad.Encriptar(item.IdConfigurarMatriz.ToString()),
-                    Estado =item.EstadoConfigurarMatriz,
-                    OpcionDosMatriz =new OpcionDosMatriz()
+                    Estado = item.EstadoConfigurarMatriz,
+                    OpcionDosMatriz = new OpcionDosMatriz()
                     {
-                        IdOpcionDosMatriz=item.IdOpcionDosMatriz,
+                        IdOpcionDosMatriz = item.IdOpcionDosMatriz,
                         IdOpcionDosMatrizEncriptado = _seguridad.Encriptar(item.IdOpcionDosMatriz.ToString()),
-                        Descripcion=item.DescripcionOpcionDosMatriz,
-                        Estado =item.EstadoOpcionOpcionDosMatriz
+                        Descripcion = item.DescripcionOpcionDosMatriz,
+                        Estado = item.EstadoOpcionOpcionDosMatriz
                     },
                     OpcionUnoMatriz =
                     new OpcionUnoMatriz()
@@ -135,10 +135,17 @@ namespace API.Models.Catalogos
                             Estado = item.EstadoPregunta,
                             Obligatorio = item.ObligatorioPregunta,
                             Orden = item.OrdenPregunta,
+<<<<<<< HEAD
                             leyendaLateral= item.leyendaLateral,
                             leyendaSuperior=item.leyendaSuperior,
                             Observacion=Convert.ToBoolean(item.observacion),
                            
+=======
+                            leyendaLateral = item.leyendaLateral,
+                            leyendaSuperior = item.leyendaSuperior,
+                            Observacion = Convert.ToBoolean(item.observacion),
+
+>>>>>>> 38defc51b45a0b8504590836b9f49951a053e090
 
                             TipoPregunta = new TipoPregunta()
                             {

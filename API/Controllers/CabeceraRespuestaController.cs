@@ -11,6 +11,7 @@ using Newtonsoft.Json.Linq;
 
 namespace API.Controllers
 {
+    [Authorize]
     public class CabeceraRespuestaController : ApiController
     {
         Seguridad _seguridad = new Seguridad();

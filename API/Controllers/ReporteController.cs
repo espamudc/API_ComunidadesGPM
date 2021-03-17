@@ -5,6 +5,7 @@ using System;
 using System.Linq;
 namespace API.Controllers
 {
+    [Authorize]
     public class ReporteController : ApiController
     {
         CatalogoRespuestasHTTP _objCatalogoRespuestasHTTP = new CatalogoRespuestasHTTP();

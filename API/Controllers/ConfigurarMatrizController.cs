@@ -10,6 +10,7 @@ using API.Models.Entidades;
 
 namespace API.Controllers
 {
+    [Authorize]
     public class ConfigurarMatrizController : ApiController
     {
         CatalogoRespuestasHTTP _objCatalogoRespuestasHTTP = new CatalogoRespuestasHTTP();
@@ -55,7 +56,7 @@ namespace API.Controllers
                     else
                     {
                         _objConfigurarMatriz.OpcionUnoMatriz.Pregunta.IdPregunta = _idPregunta;
-                        var _listaOpcionUnoMatrizPorPregunta = _objCatalogoOpcionUnoMatriz.ConsultarOpcionUnoMatrizPorIdPregunta(_idPregunta).Where(c=>c.Estado==true).ToList();
+                        var _listaOpcionUnoMatrizPorPregunta = _objCatalogoOpcionUnoMatriz.ConsultarOpcionUnoMatrizPorIdPregunta(_idPregunta).Where(c => c.Estado == true).ToList();
                         if (_listaOpcionUnoMatrizPorPregunta.Count == 0)
                         {
                             _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "400").FirstOrDefault();
@@ -92,7 +93,7 @@ namespace API.Controllers
                                     _objConfMatriz.OpcionUnoMatriz.Pregunta.Seccion.Componente.IdComponente = 0;
                                     _objConfMatriz.OpcionUnoMatriz.Pregunta.Seccion.Componente.CuestionarioGenerico.IdCuestionarioGenerico = 0;
                                 }
-                               
+
                                 _respuesta = _listaConfigurarMatriz;
                                 _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "200").FirstOrDefault();
                             }

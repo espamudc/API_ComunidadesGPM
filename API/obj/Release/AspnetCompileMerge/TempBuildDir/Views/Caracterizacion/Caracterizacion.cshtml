@@ -1,0 +1,173 @@
+﻿<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<style>
+    hr {
+        border: 0px;
+        border-top: 1px solid #ccc;
+        border-color: black;
+    }
+</style>
+@{ 
+    string ninguno = "N/A";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            <img height="67" src="~/Imagenes/Escudo-Manabi.png" />
+        </div>
+        <div style="text-align:right" class="col-xs-6">
+            <img height="67" src="~/Imagenes/Escudo-Manabi.png" />
+        </div>
+    </div>
+    <div class="row">
+        <div style="text-align:center;color:black" class="col-xs-12">
+            <font size="5">
+                CARACTERIZACIÓN
+            </font>
+            <br />
+            <font size="5">
+                COMUNIDAD <strong>@ViewBag.Encuesta.AsignarEncuestado.Comunidad.NombreComunidad.ToUpper()</strong>
+            </font>
+        </div>
+    </div>
+    <br />
+    <div style="color:black;border:1px solid cadetblue" class="row">
+        <div style="border-right:1px solid cadetblue" class="col-xs-6">
+            <div class="row">
+                <div class="col-xs-12">
+                    <strong>Parroquia: </strong>@ViewBag.Encuesta.AsignarEncuestado.Comunidad.Parroquia.NombreParroquia.ToUpper()
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="row">
+                <div class="col-xs-12">
+                    <strong>Cantón: </strong>@ViewBag.Encuesta.AsignarEncuestado.Comunidad.Parroquia.Canton.NombreCanton.ToUpper()
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="color:black;border-bottom:1px solid cadetblue;border-right:1px solid cadetblue;border-left:1px solid cadetblue" class="row">
+        <div style="border-right:1px solid cadetblue" class="col-xs-6">
+            <div style="border-bottom:1px solid cadetblue;" class="row">
+                <div style="color:cadetblue;font-weight:bold" class="col-xs-6">
+                    Población total de la
+                    parroquia:
+                </div>
+                <div class="col-xs-6">
+                    @if (ViewBag.Encuesta.AsignarEncuestado.Comunidad.Parroquia.PoblacionParroquia != null || ViewBag.Encuesta.AsignarEncuestado.Comunidad.Parroquia.PoblacionParroquia !="")
+                    {
+                        @ViewBag.Encuesta.AsignarEncuestado.Comunidad.Parroquia.PoblacionParroquia
+                    }
+                    else
+                    {
+                        <font>
+                            @ninguno
+                        </font>
+                    }
+                </div>
+            </div>
+            <div class="row">
+                <div style="color:cadetblue;font-weight:bold" class="col-xs-6">
+                    Superficie parroquial:
+                </div>
+                <div class="col-xs-6">
+                    @if (ViewBag.Encuesta.AsignarEncuestado.Comunidad.Parroquia.SuperficieParroquia != null)
+                    {
+                        @ViewBag.Encuesta.AsignarEncuestado.Comunidad.Parroquia.SuperficieParroquia
+                    }
+                    else
+                    {
+                        <font>
+                            @ninguno
+                        </font>
+                    }
+                </div>
+            </div>
+            <div class="row">
+                <div style="color:cadetblue;font-weight:bold" class="col-xs-6">
+                    Temperatura:
+                </div>
+                <div class="col-xs-6">
+                    @if (ViewBag.Encuesta.AsignarEncuestado.Comunidad.Parroquia.TemperaturaParroquia != null)
+                    {
+                        @ViewBag.Encuesta.AsignarEncuestado.Comunidad.Parroquia.TemperaturaParroquia
+                    }
+                    else
+                    {
+                        <font>
+                            @ninguno
+                        </font>
+                    }
+                </div>
+            </div>
+            <div class="row">
+                <div style="color:cadetblue;font-weight:bold" class="col-xs-6">
+                    Clima:
+                </div>
+                <div class="col-xs-6">
+                    @if (ViewBag.Encuesta.AsignarEncuestado.Comunidad.Parroquia.ClimaParroquia != null)
+                    {
+                        @ViewBag.Encuesta.AsignarEncuestado.Comunidad.Parroquia.ClimaParroquia
+                    }
+                    else
+                    {
+                        <font>
+                            @ninguno
+                        </font>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <strong>COMUNIDADES:</strong>
+        </div>
+    </div>
+    <br />
+    <div style="color:black;border-bottom:1px solid cadetblue;border-top:1px solid cadetblue;border-right:1px solid cadetblue;border-left:1px solid cadetblue" class="row">
+        <div class="col-xs-12">
+            <strong>Comunidad: </strong> @ViewBag.Encuesta.AsignarEncuestado.Comunidad.NombreComunidad.ToUpper()
+        </div>
+    </div>
+    @foreach (var item in ViewBag.Caracterizacion.AsignarCuestionarioModelo)
+    {
+        foreach (var item2 in item.AsignarComponenteGenerico)
+        {
+            <br />
+            <div style="border:1px solid cadetblue;color:black" class="row">
+                <div class="col-xs-12">
+                    <strong>@item2.Componente.Descripcion</strong>
+                </div>
+            </div>
+            if (@item2.VersionamientoModelo.Imagen == 1)
+            {
+                <div style="border:1px solid cadetblue" class="row">
+                    <div style="word-break:break-word;" class="col-xs-7">
+                        @Html.Raw((String)item2.VersionamientoModelo.Contenido)
+                    </div>
+                    <div style="padding-top:2px;margin: auto;" class="col-xs-5">
+                        <div style="border-color: gray;border-width: 5px;border-style:groove ;position: inherit;float: right;display:inline-block;">
+                            @if (ViewBag.Encuesta.AsignarEncuestado.Comunidad.RutaLogoComunidad != null || ViewBag.Encuesta.AsignarEncuestado.Comunidad.RutaLogoComunidad != "")
+                            {
+                                <img style="width:300px;height: 300px;" src="~/@(ViewBag.Encuesta.AsignarEncuestado.Comunidad.RutaLogoComunidad)" />
+                            }
+                            else
+                            {
+                                <img style="width:300px;height: 300px;" src="~/Imagenes/Escudo-Manabi.png" />
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div style="border:1px solid cadetblue" class="row">
+                    <div style="word-break:break-word" class="col-xs-12">
+                        @Html.Raw((String)item2.VersionamientoModelo.Contenido)
+                    </div>
+                </div>
+            }
+        }
+    }
+</div>

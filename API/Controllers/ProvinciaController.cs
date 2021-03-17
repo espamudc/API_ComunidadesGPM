@@ -11,6 +11,7 @@ using System.Web.Http;
 
 namespace API.Controllers
 {
+    [Authorize]
     public class ProvinciaController : ApiController
     {
         CatalogoRespuestasHTTP _objCatalogoRespuestasHTTP = new CatalogoRespuestasHTTP();
@@ -40,8 +41,6 @@ namespace API.Controllers
             return new { respuesta = _respuesta, http = _http };
         }
 
-
-
         [HttpPost]
         [Route("api/provincia_consultar")]
         public object provincia_consultar(string _idProvinciaEncriptado)
@@ -70,9 +69,6 @@ namespace API.Controllers
             }
             return new { respuesta = _respuesta, http = _http };
         }
-
-
-
 
         [HttpPost]
         [Route("api/provincia_insertar")]
@@ -133,7 +129,6 @@ namespace API.Controllers
             }
             return new { respuesta = _respuesta, http = _http };
         }
-
 
         [HttpPost]
         [Route("api/provincia_modificar")]
@@ -261,7 +256,6 @@ namespace API.Controllers
             return new { respuesta = _respuesta, http = _http };
         }
 
-
         [HttpPost]
         [Route("api/provincia_eliminar")]
         public object provincia_eliminar(string _idProvinciaEncriptado)
@@ -302,6 +296,5 @@ namespace API.Controllers
             }
             return new { respuesta = _respuesta, http = _http };
         }
-
     }
 }

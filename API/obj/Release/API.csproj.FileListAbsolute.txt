@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\jorge\Documents\gpm ultimo\API_ComunidadesGPM\API\bin\ApplicationInsights.config
 C:\Users\jorge\Documents\gpm ultimo\API_ComunidadesGPM\API\bin\roslyn\csc.exe
 C:\Users\jorge\Documents\gpm ultimo\API_ComunidadesGPM\API\bin\roslyn\csc.exe.config
@@ -95,3 +96,215 @@ C:\Users\jorge\Documents\gpm ultimo\API_ComunidadesGPM\API\obj\Release\API.cspro
 C:\Users\jorge\Documents\gpm ultimo\API_ComunidadesGPM\API\obj\Release\API.csproj.CopyComplete
 C:\Users\jorge\Documents\gpm ultimo\API_ComunidadesGPM\API\obj\Release\API.dll
 C:\Users\jorge\Documents\gpm ultimo\API_ComunidadesGPM\API\obj\Release\API.pdb
+=======
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\ApplicationInsights.config
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\csc.exe
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\csc.exe.config
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\csc.rsp
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\csi.exe
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\csi.rsp
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\System.AppContext.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\vbc.exe
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\vbc.exe.config
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\vbc.rsp
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\VBCSCompiler.exe
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\API.dll.config
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\API.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\API.pdb
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Antlr3.Runtime.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\EntityFramework.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\EntityFramework.SqlServer.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\HtmlAgilityPack.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.AI.Web.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.ApplicationInsights.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Newtonsoft.Json.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Rotativa.Core.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Rotativa.MVC.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Net.Http.Formatting.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.Cors.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.Helpers.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.Http.Cors.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.Http.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.Http.WebHost.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.Mvc.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.Optimization.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.Razor.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.WebPages.Deployment.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.WebPages.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.WebPages.Razor.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\WebGrease.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\EntityFramework.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\EntityFramework.SqlServer.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\HtmlAgilityPack.pdb
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\HtmlAgilityPack.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Newtonsoft.Json.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Net.Http.Formatting.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.Http.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.Http.Cors.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.Helpers.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.Http.WebHost.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.Mvc.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.Optimization.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.Razor.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.WebPages.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.WebPages.Deployment.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\System.Web.WebPages.Razor.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Antlr3.Runtime.pdb
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.ApplicationInsights.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\Microsoft.AI.Web.xml
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\es\System.Net.Http.Formatting.resources.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\es\System.Web.Http.resources.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\es\System.Web.Helpers.resources.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\es\System.Web.Http.WebHost.resources.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\es\System.Web.Mvc.resources.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\es\System.Web.Optimization.resources.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\es\System.Web.Razor.resources.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\es\System.Web.WebPages.resources.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\obj\Release\API.csproj.CoreCompileInputs.cache
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\obj\Release\API.csproj.CopyComplete
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\obj\Release\API.dll
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\obj\Release\API.pdb
+C:\Users\jorge\Downloads\portoviejo\Api SWT\API\obj\Release\API.csprojAssemblyReference.cache
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\ApplicationInsights.config
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\csc.exe
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\csc.exe.config
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\csc.rsp
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\csi.exe
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\csi.rsp
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\System.AppContext.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\System.Collections.Immutable.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\System.IO.FileSystem.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\System.Reflection.Metadata.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\vbc.exe
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\vbc.exe.config
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\vbc.rsp
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\VBCSCompiler.exe
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\roslyn\VBCSCompiler.exe.config
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\API.dll.config
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\API.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\API.pdb
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Antlr3.Runtime.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\EntityFramework.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\EntityFramework.SqlServer.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\HtmlAgilityPack.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.AI.Agent.Intercept.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.AI.DependencyCollector.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.AI.Web.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.AI.WindowsServer.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.ApplicationInsights.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.IdentityModel.Logging.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.IdentityModel.Tokens.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.Web.Infrastructure.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Newtonsoft.Json.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Rotativa.Core.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Rotativa.MVC.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.IdentityModel.Tokens.Jwt.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Net.Http.Formatting.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.Cors.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.Helpers.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.Http.Cors.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.Http.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.Http.WebHost.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.Mvc.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.Optimization.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.Razor.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.WebPages.Deployment.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.WebPages.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.WebPages.Razor.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\WebGrease.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\EntityFramework.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\EntityFramework.SqlServer.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\HtmlAgilityPack.pdb
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\HtmlAgilityPack.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.IdentityModel.Logging.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.IdentityModel.Tokens.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Newtonsoft.Json.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.IdentityModel.Tokens.Jwt.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Net.Http.Formatting.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.Http.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.Http.Cors.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.Helpers.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.Http.WebHost.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.Mvc.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.Optimization.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.Razor.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.WebPages.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.WebPages.Deployment.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\System.Web.WebPages.Razor.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Antlr3.Runtime.pdb
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.ApplicationInsights.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.AI.DependencyCollector.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.AI.WindowsServer.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\Microsoft.AI.Web.xml
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\es\System.Net.Http.Formatting.resources.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\es\System.Web.Http.resources.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\es\System.Web.Helpers.resources.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\es\System.Web.Http.WebHost.resources.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\es\System.Web.Mvc.resources.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\es\System.Web.Optimization.resources.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\es\System.Web.Razor.resources.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\es\System.Web.WebPages.resources.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\es\System.Web.WebPages.Deployment.resources.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\bin\es\System.Web.WebPages.Razor.resources.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\obj\Release\API.csprojAssemblyReference.cache
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\obj\Release\API.csproj.CoreCompileInputs.cache
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\obj\Release\API.csproj.CopyComplete
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\obj\Release\API.dll
+F:\PROYECTOS-UDC\2020\GPM\API\ulitmo\API\obj\Release\API.pdb
+>>>>>>> 38defc51b45a0b8504590836b9f49951a053e090

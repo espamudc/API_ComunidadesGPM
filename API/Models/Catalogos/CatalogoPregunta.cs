@@ -34,7 +34,11 @@ namespace API.Models.Catalogos
         {
             try
             {
+<<<<<<< HEAD
                 return int.Parse(db.Sp_PreguntaInsertar(_objPregunta.TipoPregunta.IdTipoPregunta, _objPregunta.Seccion.IdSeccion, _objPregunta.Descripcion, _objPregunta.Orden, _objPregunta.Obligatorio, _objPregunta.Estado, _objPregunta.leyendaSuperior, _objPregunta.leyendaLateral, _objPregunta.Observacion, _objPregunta.campo_observacion, _objPregunta.Reporte).Select(x => x.Value.ToString()).FirstOrDefault());
+=======
+                return int.Parse(db.Sp_PreguntaInsertar(_objPregunta.TipoPregunta.IdTipoPregunta, _objPregunta.Seccion.IdSeccion, _objPregunta.Descripcion, _objPregunta.Orden, _objPregunta.Obligatorio, _objPregunta.Estado, _objPregunta.leyendaSuperior, _objPregunta.leyendaLateral, _objPregunta.Observacion, _objPregunta.campo_observacion,_objPregunta.Reporte).Select(x => x.Value.ToString()).FirstOrDefault());
+>>>>>>> 38defc51b45a0b8504590836b9f49951a053e090
             }
             catch (Exception)
             {

@@ -10,6 +10,7 @@ using API.Models.Entidades;
 
 namespace API.Controllers
 {
+    [Authorize]
     public class AsignarTipoUsuarioModuloPrivilegioController : ApiController
     {
         CatalogoRespuestasHTTP _objCatalogoRespuestasHTTP = new CatalogoRespuestasHTTP();

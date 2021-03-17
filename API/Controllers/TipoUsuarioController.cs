@@ -10,6 +10,7 @@ using API.Models.Metodos;
 
 namespace API.Controllers
 {
+    [Authorize]
     public class TipoUsuarioController : ApiController
     {
         CatalogoRespuestasHTTP _objCatalogoRespuestasHTTP = new CatalogoRespuestasHTTP();

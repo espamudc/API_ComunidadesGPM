@@ -10,6 +10,7 @@ using API.Models.Metodos;
 
 namespace API.Controllers
 {
+    [Authorize]
     public class CuestionarioGenericoController : ApiController
     {
         CatalogoRespuestasHTTP _objCatalogoRespuestasHTTP = new CatalogoRespuestasHTTP();
@@ -275,6 +276,56 @@ object _respuesta = new object();
                     _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "200").FirstOrDefault();
                 }
                 
+            }
+            catch (Exception ex)
+            {
+                _http.mensaje = _http.mensaje + " " + ex.Message.ToString();
+            }
+
+            //var _http = "g";
+            return new { respuesta = _respuesta, http = _http };
+        }
+
+
+        [HttpPost]
+        [Route("api/cuestionariogenerico_consultarporidconcomponenteconseccionconpreguntasRandom")]
+        public object cuestionario_generico_consultarRandom(string _idCuestionarioGenericoEncriptado)
+        {
+            object _respuesta = new object();
+            RespuestaHTTP _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "500").FirstOrDefault();
+            //var _objCuestionario = _objCatalogoCuestionarioGenerico.ConsultarCuestionarioGenericoPorIdConComponenteSeccionPregunta(int.Parse(_idCuestionarioGenerico)).Where(c => c.Estado == true).FirstOrDefault();
+
+            try
+            {
+                if (_idCuestionarioGenericoEncriptado == null || string.IsNullOrEmpty(_idCuestionarioGenericoEncriptado))
+                {
+                    _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "400").FirstOrDefault();
+                    _http.mensaje = "Ingrese el identificador del cuestionario";
+                }
+                else
+                {
+                    int _idCuestionario = Convert.ToInt32(_seguridad.DesEncriptar(_idCuestionarioGenericoEncriptado));
+                    var _objCuestionario = _objCatalogoCuestionarioGenerico.ConsultarCuestionarioGenericoPorIdConComponenteSeccionPreguntaRandom(_idCuestionario).Where(c => c.Estado == true).FirstOrDefault();
+
+                    _objCuestionario.IdCuestionarioGenerico = 0;
+
+                    foreach (var componente in _objCuestionario.listaComponente)
+                    {
+                        componente.IdComponente = 0;
+                        foreach (var seccion in componente.listaSeccion)
+                        {
+                            seccion.IdSeccion = 0;
+                            foreach (var pregunta in seccion.listaPregunta)
+                            {
+                                pregunta.IdPregunta = 0;
+                                pregunta.TipoPregunta.IdTipoPregunta = 0;
+                            }
+                        }
+                    }
+                    _respuesta = _objCuestionario;
+                    _http = _objCatalogoRespuestasHTTP.consultar().Where(x => x.codigo == "200").FirstOrDefault();
+                }
+
             }
             catch (Exception ex)
             {

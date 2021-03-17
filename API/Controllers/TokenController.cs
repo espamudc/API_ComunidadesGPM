@@ -8,6 +8,7 @@ using System.Web.Http;
 
 namespace API.Controllers
 {
+    [Authorize]
     public class TokenController : ApiController
     {
         CatalogoTokens CatTokens = new CatalogoTokens();
